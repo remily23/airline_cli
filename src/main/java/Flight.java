@@ -7,8 +7,8 @@ public class Flight {
 
     private Location departureLocation;
     private Location arrivalLocation;
-    private LocalDate departureTime;
-    private LocalDate arrivalTime;
+    private LocalDate departureDate;
+    private LocalDate arrivalDate;
     private double duration;
     private ArrayList<Passenger> passengers;
 
@@ -16,8 +16,8 @@ public class Flight {
         this.flightID = flightID;
         this.departureLocation = departureLocation;
         this.arrivalLocation = arrivalLocation;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
+        this.departureDate = departureTime;
+        this.arrivalDate = arrivalTime;
         this.duration = duration;
         this.passengers = new ArrayList<>();
     }
@@ -47,19 +47,19 @@ public class Flight {
     }
 
     public LocalDate getDepartureTime() {
-        return departureTime;
+        return departureDate;
     }
 
     public void setDepartureTime(LocalDate departureTime) {
-        this.departureTime = departureTime;
+        this.departureDate = departureTime;
     }
 
     public LocalDate getArrivalTime() {
-        return arrivalTime;
+        return arrivalDate;
     }
 
     public void setArrivalTime(LocalDate arrivalTime) {
-        this.arrivalTime = arrivalTime;
+        this.arrivalDate = arrivalTime;
     }
 
     public double getDuration() {
