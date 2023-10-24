@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Flights {
+public class FlightManager {
 
    private ArrayList<Flight> flights;
 
-   public Flights() {
+   public FlightManager() {
        this.flights = new ArrayList<>();
    }
 

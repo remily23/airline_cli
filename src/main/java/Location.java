@@ -1,7 +1,15 @@
 public enum Location {
 
-    HEATHROW,
-    BRISTOL,
-    ISTANBUL,
-    PARIS;
-}
+    HEATHROW("Heathrow"),
+    BRISTOL("Bristol"),
+    ISTANBUL("Istanbul"),
+    PARIS("Paris");
+    String name;
+
+    Location(String name){
+        this.name=name;
+    }
+
+
+
+    }
