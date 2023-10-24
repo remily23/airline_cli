@@ -72,8 +72,12 @@ public class Passenger {
         this.passengerType = passengerType;
     }
 
-    public void upgradePassenger(PassengerType passengerType){
-        this.setPassengerType(passengerType);
+    public void upgradePassenger(){
+        if (this.passengerType== PassengerType.ECONOMY){
+            this.setPassengerType(PassengerType.BUSINESS);
+        } else if (this.passengerType== PassengerType.BUSINESS){
+            this.setPassengerType(PassengerType.FIRST);
+        }
     }
     
 }

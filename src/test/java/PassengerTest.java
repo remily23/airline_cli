@@ -17,6 +17,35 @@ public class PassengerTest {
                 23);
     }
 
+    @Test
+    public void canAddLuggage(){
+        passenger.addLuggage(20);
+        assertThat(passenger.getLuggageAllowance()).isEqualTo(43);
+    }
+    @Test
+    public void canRemoveLuggage(){
+        passenger.removeLuggage(20);
+        assertThat(passenger.getLuggageAllowance()).isEqualTo(3);
+    }
+
+    @Test
+    public void canUpgradePassengerEconomy(){
+        passenger.upgradePassenger();
+        assertThat(passenger.getPassengerType()).isEqualTo(PassengerType.BUSINESS);
+    }
+    @Test
+    public void canUpgradePassengerBusiness(){
+        passenger.setPassengerType(PassengerType.BUSINESS);
+        passenger.upgradePassenger();
+        assertThat(passenger.getPassengerType()).isEqualTo(PassengerType.FIRST);
+    }
+    @Test
+    public void canUpgradePassengerFirst(){
+        passenger.setPassengerType(PassengerType.FIRST);
+        passenger.upgradePassenger();
+        assertThat(passenger.getPassengerType()).isEqualTo(PassengerType.FIRST);
+    }
+
 
     @Test
     public void canGetName(){
@@ -82,4 +111,4 @@ public class PassengerTest {
 //        assertThat(passenger.getName()).isEqualTo("Squidward");
 //    }
 //
-//}
+}
